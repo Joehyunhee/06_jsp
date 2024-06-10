@@ -1,0 +1,23 @@
+package com.ohgiraffers.eljstl.controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import com.ohgiraffers.eljstl.model.dto.MemberDTO;
+
+@WebServlet("/test2")
+public class TestTwoServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		MemberDTO member = new MemberDTO("다람쥐", 900, "010-1111-2222",
+				"squirrel@ohgiraffer" request.setAttribute("member", member));
+		
+	}
+	
+
+}
